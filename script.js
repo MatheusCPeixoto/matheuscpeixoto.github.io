@@ -1,10 +1,5 @@
-/*
-  script-creative.js
-  JavaScript para o tema "Creative Gradient" com animações de scroll.
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Rolagem suave para links de navegação (mesma função do original)
+  // NAVEGA SUAVE PARA SEÇÕES INTERNAS
   const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
   navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -20,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2. Feedback visual para o formulário de contato (mesma função do original)
+  // RESPOSTA PARA QUANDO FORMULÁRIO DE CONTATO É ENVIADO (SÓ PARA FINS DE DEMONSTRAÇÃO)
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
@@ -33,35 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 4000);
     });
   }
-
-  // 3. NOVO: Animação de "fade/slide in" ao rolar a página
-  // Seleciona todos os elementos que devem ser animados
-  const animatedElements = document.querySelectorAll(
-    ".section-title, .section-subtitle, .section-content > *, .portfolio-card"
-  );
-
-  // Adiciona a classe 'hidden' a todos eles para começar
-  animatedElements.forEach((el) => el.classList.add("hidden"));
-
-  // Cria um observador de interseção
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        // Se o elemento estiver visível na tela
-        if (entry.isIntersecting) {
-          // Remove a classe 'hidden' e adiciona 'visible' para ativar a animação
-          entry.target.classList.remove("hidden");
-          entry.target.classList.add("visible");
-          // Para de observar o elemento para não animar novamente
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.1, // A animação começa quando 10% do elemento está visível
-    }
-  );
-
-  // Inicia a observação para cada elemento
-  animatedElements.forEach((el) => observer.observe(el));
 });

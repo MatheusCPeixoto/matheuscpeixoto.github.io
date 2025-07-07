@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- Define o documento como HTML5 -->
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Título que aparece na aba do navegador -->
+
+    <!-- TÍTULO DA PÁGINA -->
     <title>Portfólio | Matheus Costa Peixoto</title>
 
-    <!-- Importação da fonte Poppins do Google Fonts -->
+    <!-- IMPORTAÇÃO DA FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,11 +15,11 @@
       rel="stylesheet"
     />
 
-    <!-- Link para a folha de estilos CSS -->
+    <!-- LINK PARA O ARQUIVO CSS COM OS ESTILOS DA PÁGINA -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Cabeçalho e Navegação -->
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
     <header class="main-header">
       <nav class="main-nav">
         <ul>
@@ -31,9 +31,9 @@
       </nav>
     </header>
 
-    <!-- Conteúdo Principal do Site -->
+    <!-- INICIO DO CONTEUDO DO SITE -->
     <main>
-      <!-- Seção: Sobre Mim -->
+      <!-- SOBRE MIM -->
       <section id="sobre" class="section">
         <div class="container">
           <h1 class="section-title">Matheus Costa Peixoto</h1>
@@ -52,7 +52,7 @@
         </div>
       </section>
 
-      <!-- Seção: Formação Educacional -->
+      <!-- FORMAÇÃO EDUCACIONAL -->
       <section id="formacao" class="section">
         <div class="container">
           <h2 class="section-title">Formação Educacional</h2>
@@ -73,18 +73,17 @@
         </div>
       </section>
 
-      <!-- Seção: Portfólio -->
+      <!-- PORTFÓLIO -->
       <section id="portfolio" class="section">
         <div class="container">
           <h2 class="section-title">Portfólio</h2>
           <div class="portfolio-grid">
-            <!-- Projeto 1 -->
+            <!-- PROJETO DJANGO PARA CONTROLE DO CHÃO DE FÁBRICA -->
             <div class="portfolio-card">
               <img
-                src="https://placehold.co/600x400/2d3748/f0f6fc?text=Microsserviço+Django"
+                src="imagens/django.png"
                 alt="Imagem do projeto de microsserviço em Django"
                 class="portfolio-image"
-                onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d3748/f0f6fc?text=Imagem+Indisponível';"
               />
               <div class="card-content">
                 <h3>Microsserviço de Controle de Produção</h3>
@@ -96,15 +95,17 @@
                 <span class="tech-tag">Django</span>
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">API REST</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
               </div>
             </div>
-            <!-- Projeto 2 -->
+            <!-- PROJETO EM PBI PARA ANALISE DOS DADOS DA PRODUÇÃO, DADOS VINDOS DO ERP -->
             <div class="portfolio-card">
               <img
-                src="https://placehold.co/600x400/2d3748/f0f6fc?text=Relatório+Power+BI"
+                src="imagens/pbi.png"
                 alt="Imagem do projeto de relatório em Power BI"
                 class="portfolio-image"
-                onerror="this.onerror=null;this.src='https://placehold.co/600x400/2d3748/f0f6fc?text=Imagem+Indisponível';"
               />
               <div class="card-content">
                 <h3>Relatório de Análise de Dados</h3>
@@ -114,28 +115,32 @@
                 </p>
                 <span class="tech-tag">Power BI</span>
                 <span class="tech-tag">DAX</span>
+                <span class="tech-tag">SQL</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Seção: Contato -->
+      <!-- CONTATO -->
       <section id="contato" class="section">
         <div class="container">
           <h2 class="section-title">Contato</h2>
           <p class="section-subtitle">
-            Tem alguma pergunta ou quer trabalhar junto?
+            Tem alguma pergunta ou deseja uma cotação ?
           </p>
+
           <form class="contact-form">
             <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" id="nome" name="nome" required />
             </div>
+
             <div class="form-group">
               <label for="email">E-mail</label>
               <input type="email" id="email" name="email" required />
             </div>
+
             <div class="form-group">
               <label for="mensagem">Mensagem</label>
               <textarea
@@ -145,18 +150,19 @@
                 required
               ></textarea>
             </div>
+
             <button type="submit" class="btn-submit">Enviar Mensagem</button>
           </form>
         </div>
       </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ -->
     <footer class="main-footer">
       <p>&copy; 2025 Matheus Costa Peixoto. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Link para o arquivo JavaScript -->
+    <!-- LINK PARA O ARQUIVO JS -->
     <script src="script.js"></script>
   </body>
 </html>

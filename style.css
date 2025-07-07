@@ -1,36 +1,29 @@
-/* 1. Configurações Globais e Variáveis de Cor */
+/* VARIÁVEIS DE COR E CONFIGURAÇÕES GLOBAIS*/
 
-/* Define as variáveis de cor para manter a consistência do tema. */
+/* VARIÁVEIS DE COR */
 :root {
-  --bg-primary: #0d1117; /* Azul "Midnight" - Fundo principal */
-  --bg-secondary: #161b22; /* Azul escuro um pouco mais claro para cards */
-  --text-primary: #f0f6fc; /* Cinza claro para textos */
-  --text-secondary: #c9d1d9; /* Cinza um pouco mais escuro para subtítulos */
-  --accent: #22d3ee; /* Ciano para destaque */
-  --border-color: #30363d; /* Cor da borda */
+  --bg-primario: #0d1117; /* BACKGROUND PRINCIPAL */
+  --bg-secundario: #161b22; /* BACKGROUND PARA CARTÕES */
+  --txt-primario: #f0f6fc; /* TEXTOS PRINCIPAIS */
+  --txt-secundario: #c9d1d9; /* SUBTITULOS */
+  --destaques: #22d3ee; /* COR PARA DESTAQUES */
+  --cor-borda: #30363d; /* COR DAS BORDAS */
 }
 
-/* Reset básico para remover estilos padrão do navegador. */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Define o comportamento de rolagem suave para toda a página. */
+/* COLOCAR A ROLAGEM DE FORMA SUAVE. */
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilos principais do corpo da página. */
+/* ESTILO PRINCIPAL DO BODY */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--bg-primario);
+  color: var(--txt-primario);
   line-height: 1.6;
 }
 
-/* 2. Cabeçalho e Navegação */
+/* CABEÇALHO */
 
 .main-header {
   background-color: rgba(13, 17, 23, 0.8); /* Fundo com transparência */
@@ -40,18 +33,20 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--cor-borda);
 }
+
+/* NAVEGAÇÃO */
 
 .main-nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Espaçamento entre os links */
+  gap: 2rem;
 }
 
 .main-nav a {
-  color: var(--text-secondary);
+  color: var(--txt-secundario);
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -59,13 +54,13 @@ body {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre os links da navegação. */
+/* EFEITO NOS BOTÕES DE NAVEGAÇÃO */
 .main-nav a:hover {
-  color: var(--accent);
-  background-color: var(--bg-secondary);
+  color: var(--destaques);
+  background-color: var(--bg-secundario);
 }
 
-/* 3. Estrutura das Seções e Títulos */
+/* ESTRUTURA */
 
 .section {
   padding: 6rem 2rem; /* Espaçamento interno das seções */
@@ -73,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--cor-borda);
 }
 
 .container {
@@ -82,15 +77,17 @@ body {
   text-align: center;
 }
 
+/* TÍTULOS E SUBTÍTULOS DAS SEÇÕES */
+
 .section-title {
   font-size: 2.5rem;
-  color: var(--accent);
+  color: var(--destaques);
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: var(--txt-secundario);
   margin-bottom: 2rem;
   font-weight: 300;
 }
@@ -101,9 +98,9 @@ body {
   text-align: left;
 }
 
-/* 4. Estilos Específicos das Seções */
+/* 4. ESTILOS DAS SEÇÕES */
 
-/* Formação */
+/* ESCOLARIDADE */
 .formation-list {
   display: flex;
   flex-direction: column;
@@ -111,10 +108,10 @@ body {
 }
 
 .formation-item {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secundario);
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--destaques);
 }
 
 .formation-item h3 {
@@ -122,24 +119,21 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Portfólio */
+/* PORTFÓLIO */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Grid responsivo */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); /* Responsivo */
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .portfolio-card {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secundario);
   border-radius: 8px;
   overflow: hidden; /* Garante que a imagem não saia do card */
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--cor-borda);
 }
 
 .portfolio-card:hover {
@@ -164,8 +158,8 @@ body {
 
 .tech-tag {
   display: inline-block;
-  background-color: var(--border-color);
-  color: var(--accent);
+  background-color: var(--cor-borda);
+  color: var(--destaques);
   padding: 0.3rem 0.7rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -174,7 +168,7 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Contato */
+/* PARTE DE CONTATO */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto 0;
@@ -188,24 +182,24 @@ body {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--text-secondary);
+  color: var(--txt-secundario);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  background-color: var(--bg-secundario);
+  border: 1px solid var(--cor-borda);
   border-radius: 6px;
-  color: var(--text-primary);
+  color: var(--txt-primario);
   font-family: "Poppins", sans-serif;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--accent);
+  border: var(--destaques);
   box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
 }
 
@@ -213,8 +207,8 @@ body {
   display: block;
   width: 100%;
   padding: 1rem;
-  background-color: var(--accent);
-  color: var(--bg-primary);
+  background-color: var(--destaques);
+  color: var(--bg-primario);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
@@ -228,12 +222,12 @@ body {
   transform: scale(1.02);
 }
 
-/* 5. Rodapé */
+/* RODAPÉ */
 
 .main-footer {
   text-align: center;
   padding: 2rem;
-  border-top: 1px solid var(--border-color);
-  color: var(--text-secondary);
+  border-top: 1px solid var(--cor-borda);
+  color: var(--txt-secundario);
   font-size: 0.9rem;
 }
