@@ -1,0 +1,239 @@
+/* 1. Configurações Globais e Variáveis de Cor */
+
+/* Define as variáveis de cor para manter a consistência do tema. */
+:root {
+  --bg-primary: #0d1117; /* Azul "Midnight" - Fundo principal */
+  --bg-secondary: #161b22; /* Azul escuro um pouco mais claro para cards */
+  --text-primary: #f0f6fc; /* Cinza claro para textos */
+  --text-secondary: #c9d1d9; /* Cinza um pouco mais escuro para subtítulos */
+  --accent: #22d3ee; /* Ciano para destaque */
+  --border-color: #30363d; /* Cor da borda */
+}
+
+/* Reset básico para remover estilos padrão do navegador. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define o comportamento de rolagem suave para toda a página. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos principais do corpo da página. */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* 2. Cabeçalho e Navegação */
+
+.main-header {
+  background-color: rgba(13, 17, 23, 0.8); /* Fundo com transparência */
+  backdrop-filter: blur(10px); /* Efeito de desfoque para o fundo */
+  padding: 1rem 0;
+  position: sticky; /* Mantém o cabeçalho fixo no topo */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espaçamento entre os links */
+}
+
+.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os links da navegação. */
+.main-nav a:hover {
+  color: var(--accent);
+  background-color: var(--bg-secondary);
+}
+
+/* 3. Estrutura das Seções e Títulos */
+
+.section {
+  padding: 6rem 2rem; /* Espaçamento interno das seções */
+  min-height: 100vh; /* Garante que cada seção ocupe a tela inteira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+  text-align: left;
+}
+
+/* 4. Estilos Específicos das Seções */
+
+/* Formação */
+.formation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formation-item {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+}
+
+.formation-item h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Portfólio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Grid responsivo */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolio-card {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem não saia do card */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px); /* Efeito de flutuar */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: var(--border-color);
+  color: var(--accent);
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Contato */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #67e8f9; /* Ciano mais claro */
+  transform: scale(1.02);
+}
+
+/* 5. Rodapé */
+
+.main-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
